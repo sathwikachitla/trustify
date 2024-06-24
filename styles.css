@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    background: linear-gradient(135deg, #7400b8, #48bfe3, #80ffdb);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+    color: #fff;
+}
+a{
+    font-family: "Oswald", sans-serif;
+}
+
+@keyframes gradientBG {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.navbar {
+    width: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+}
+
+.navbar-brand {
+    color: #fff;
+    font-size: 2.5rem;
+    text-decoration: none;
+}
+
+.navbar-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.bar {
+    height: 3px;
+    width: 25px;
+    background-color: #fff;
+    margin: 4px 0;
+}
+
+.navbar-menu {
+    display: flex;
+    list-style: none;
+    gap: 1rem;
+}
+
+.navbar-item {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-link {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding-top: 5rem;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 700px;
+    text-align: center;
+}
+
+.card h1, .card h2 {
+    font-family: "Oswald", sans-serif;
+    margin: 0 0 20px;
+    font-size: 40px;
+}
+
+.input-group {
+    display: flex;
+    gap: 10px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+}
+
+.input-group button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4ebcf8;
+    color: #fff;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.input-group button i {
+    font-size: 16px;
+}
+
+.input-group button:hover {
+    background-color: #1e9bff;
+}
+
+#result {
+    margin-top: 15px;
+    font-size: 18px;
+}
+
+@media (max-width: 768px) {
+    .navbar-toggle {
+        display: flex;
+    }
+    .navbar-menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+    .navbar-menu.active {
+        display: flex;
+    }
+    .navbar-item {
+        padding: 1rem;
+        width: 100%;
+        text-align: center;
+    }
+    .container {
+        padding-top: 6rem;
+    }
+}
+#contact-section{
+    
+}
+

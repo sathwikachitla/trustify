@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TrustCheck.</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="#" class="navbar-brand">TrustCheck.</a>
+            <div class="navbar-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="navbar-menu">
+                <li class="navbar-item">
+                    <a href="#" class="navbar-link"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAddJREFUSEvt1j1rFFEUxvH/o2BsRLEJWMQiFikEG9lCAgnYWIRgEbSJKNio+Am2UQvJJ0hCIIEEkyIhEAgpbAIuBAuxsEgjaKGFYCOKjQryuBdmZDK7s/OyE9Jku7177vnNPffO2SuO6KMjcqkM254GLGmtysNXgiP0RQTekbRaFi8N274B7AAnI+wvMCHpZRm8FGy7AbSA0ynkFzAm6U1RvDBse7i9srfAuYzk39uVuCrpYxG8EGx7EAirGcpJ+hloSPqah+fCts8Ar4HLecmi3/eBa5J+9orvCds+BewCowXROGwPuC7pT9a8TNj2CWALmCyJxuHbwE1J7ja/F7wI3K+IxtNmJT0uDNtuAs/7ROPpTUkz6VwdK051pZpsOrrbAbhLV6oL7uhu/2HbI+3D8A4YqEtL5fndPqxXJL0P40n4ITB3SGic9oGkhTQcmn44xReiqHvAxT4f5BOwHOX4AixJCmXP/j+2/So0/j7hlqTxwq9TCDyGE+VaSexbPBzOw90uJa211M8kPU0itsP3J8dwuCbVeaoPvdTrwK0u+/ZI0nxqj7O63oak22Xf40vAVOpG+Q1YkfQjBZ+NTvX5xHi4eW5K+lAK7rNj5U7PvezlZqgY8A/RW7AfsZyV+gAAAABJRU5ErkJggg== " title="Home"/></a>
+                    
+                </li>
+                <li class="navbar-item">
+                    <a href="#report-section" class="navbar-link"><i class="fas fa-exclamation-triangle" title="Report a website"></i></a>
+                </li>
+                <li class="navbar-item">
+                    <a href="#contact-section" class="navbar-link"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAjpJREFUSEvFlk2ITmEUx39/ZEEhlJhiFCIWNmJW1GxZWCGlWUkWmpoU2clXSE2zmpWUxEIW2FlQinyUHZOv5DOyoGwUx3t073TnmXvf57l33rc5q7s45/ye8zznnvMX02SaJi61wGY2E9gC9AJLs0N/At4CjyT9SS0kCWxmq4GjwE5gQUXy78AN4LSkN7EDtAWb2RzgDHAQ8GpT7DdwDjguyb9LrRJsZiuA28D6FFqJz2Ngu6SvZfGlYDNbB9wHFjaE5mEfgT5J78M8k8BmtgR4CvRMEZqHP2/d3CZJv4r5ysBXgV0R6A/gWeazEZgf8R+WNFgJNrO1LaifMGb3JG1zJzO7C2yNBHiT9Ur6nPtNqNjMLgH7YlSgLthTnpJ0bBLYzGYD34B5CeC6V+0pX0nyefDfxis2s37gTgJ0Ki5rJL0MwQPAxcSsTSr21Dsk3QrBh4GzieAmb+ypByUNh+Ah4HyXwUOSLoTgPcCVLoN3S7oWgn3dPegy2CfYkxDsHe6/06IEeJM3/gIsk2QTwNkUGgX2dwk8IulQ1eRaBYy1dumMCLxuxa5MVha3VNmSuAzsjYDr/sejkg4Uc5aBFwO+xF1XdcJeAJsl/WwLzt7aZ+rDDggBF4IO/RBW0E76eMU3gQ0Ny3Yx4SNyfBVGK84dzGwucALwbow1XB7mu9cF4slGYq94ukwgHMnkbdXadHl7Pdu772K3lKSrCzcwy8UbsDwQ9K+9ISX9jQFL/+PUoE741aq4E8A8xz/6v8wfZnp0nAAAAABJRU5ErkJggg==" title="About Us"/> </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container" id="home-section">
+        <div class="card">
+            <h1>Check URL</h1>
+            <div class="input-group">
+                <input type="text" id="urlInput" placeholder="Enter a URL" />
+                <button onclick="checkUrl()"><i class="fas fa-search"></i> Check</button>
+            </div>
+            <p id="result"></p>
+        </div>
+    </div>
+    <div class="container" id="report-section">
+        <div class="card">
+            <h2>Report a Website</h2>
+            <div class="input-group">
+                <input type="text" id="reportUrlInput" placeholder="Enter URL you want to report" />
+                <button onclick="reportUrl()"><i class="fas fa-flag"></i> Report</button>
+            </div>
+        </div>
+    </div>
+    <div class="container" id="contact-section">
+        <div class="card">
+            <h1>Disclaimer</h1>
+            <p>We make every effort to bring you the most accurate information we can, but nobody’s perfect. <p>If we’ve made a mistake or can improve on our site, please let us know.</p> The information in this service is for general information purposes and we are not responsible for any damages or other negative consequences arising from it.</p>
+        </div>
+        <p>Contact Us: <a href="#">example@email.com</a></p>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
